@@ -1,9 +1,10 @@
-import Dependencies._
 
 ThisBuild / scalaVersion     := "2.12.10"
 ThisBuild / version          := "0.1.0-SNAPSHOT"
 ThisBuild / organization     := "com.example"
 ThisBuild / organizationName := "example"
+
+scalacOptions ++= Seq("-Xlint")
 
 lazy val IntegrationTest = config("it") extend(Runtime)
 lazy val selenium = "org.scalatestplus" %% "selenium-3-141" % "3.2.9.0"

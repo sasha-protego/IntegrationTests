@@ -18,10 +18,9 @@ class HelloSpec extends munit.FunSuite {
   override def munitFixtures: Seq[Fixture[_]] = List(ff)
 
   test("should fail"){
-    val foo = 5
+    val foo = 7
     Future {
-      Thread.sleep(3000)
-      assert(ff() === foo)
+      assertEquals(ff(), foo)
     }
   }
 
